@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>About the Artisan - The Weeping Fae</title>
+
+    <link
+        rel="stylesheet"
+        href="styles.css"
+    >
+</head>
+
+<body>
+
+    <div id="site-header"></div>
+
+
+    <section class="page-hero">
+
+        <h1>
+            About the Artisan
+        </h1>
+
+        <p>
+            Handmade adornments inspired by Renaissance,
+            medieval, fantasy, and historical styles.
+        </p>
+
+    </section>
+
+
+    <main>
+
+        <section class="content-section">
+
+            <h2>
+                The Weeping Fae
+            </h2>
+
+            <p>
+                The Weeping Fae is a handmade jewelry shop
+                focused on creating Renaissance-inspired,
+                medieval, fantasy, and historically influenced
+                accessories.
+            </p>
+
+            <p>
+                Each piece is made by hand rather than
+                mass-produced, allowing individual variations
+                and craftsmanship to become part of the
+                character of every adornment.
+            </p>
+
+        </section>
+
+
+        <section class="content-section">
+
+            <h2>
+                Handcrafted With Intention
+            </h2>
+
+            <p>
+                The collection includes glasses chains,
+                decorative bells, earrings, hair pins,
+                and chainmail necklaces.
+            </p>
+
+            <p>
+                Many pieces are produced in small quantities,
+                making availability limited compared with
+                commercially manufactured jewelry.
+            </p>
+
+        </section>
+
+
+        <section class="content-section">
+
+            <h2>
+                Inspiration
+            </h2>
+
+            <p>
+                The designs draw inspiration from Renaissance
+                courts, medieval ornamentation, folklore,
+                fantasy worlds, historical accessories,
+                chainmail techniques, and decorative metalwork.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <div
+        class="cart-overlay"
+        id="cart-overlay"
+        onclick="closeCart()"
+    ></div>
+
+
+    <div
+        class="cart-window"
+        id="cart-window"
+    >
+
+        <div class="cart-header">
+
+            <h2>
+                Your Shopping Cart
+            </h2>
+
+            <button
+                class="close-cart"
+                onclick="closeCart()"
+                aria-label="Close cart"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div id="cart-items"></div>
+
+
+        <div class="cart-total">
+
+            <strong>
+                Subtotal:
+                $<span id="cart-total">0.00</span>
+            </strong>
+
+        </div>
+
+
+        <a
+            href="catalog.html"
+            class="continue-shopping"
+        >
+            Continue Shopping
+        </a>
+
+        <button
+            class="future-checkout"
+            disabled
+        >
+            Future Checkout
+        </button>
+
+    </div>
+
+
+    <footer>
+
+        <p>
+            &copy; 2026 The Weeping Fae.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="header.js"></script>
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+
+    <script>
+        updateCart();
+    </script>
+
+</body>
+
+</html>

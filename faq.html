@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>FAQ - The Weeping Fae</title>
+
+    <link
+        rel="stylesheet"
+        href="styles.css"
+    >
+</head>
+
+<body>
+
+    <div id="site-header"></div>
+
+
+    <section class="page-hero">
+
+        <h1>
+            Frequently Asked Questions
+        </h1>
+
+    </section>
+
+
+    <main>
+
+        <section class="content-section">
+
+            <h3>
+                Are the pieces handmade?
+            </h3>
+
+            <p>
+                Yes. The jewelry and accessories are
+                handcrafted rather than mass-produced,
+                so small variations may appear between
+                individual pieces.
+            </p>
+
+        </section>
+
+
+        <section class="content-section">
+
+            <h3>
+                Why are quantities limited?
+            </h3>
+
+            <p>
+                Handmade items take time to create,
+                and many designs may only be available
+                in quantities of one or two.
+            </p>
+
+        </section>
+
+
+        <section class="content-section">
+
+            <h3>
+                What types of jewelry are available?
+            </h3>
+
+            <p>
+                The collection may include glasses chains,
+                decorative bells, earrings, hair pins,
+                chainmail necklaces, and other
+                Renaissance-inspired accessories.
+            </p>
+
+        </section>
+
+
+        <section class="content-section">
+
+            <h3>
+                Can I request custom jewelry?
+            </h3>
+
+            <p>
+                Custom jewelry requests may be added as a
+                future feature. Potential options could
+                include different colors, metals, chain
+                lengths, charms, or decorative elements.
+            </p>
+
+        </section>
+
+
+        <section class="content-section">
+
+            <h3>
+                Can I purchase sold-out products?
+            </h3>
+
+            <p>
+                Sold-out products cannot currently be added
+                to the shopping cart.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <div
+        class="cart-overlay"
+        id="cart-overlay"
+        onclick="closeCart()"
+    ></div>
+
+
+    <div
+        class="cart-window"
+        id="cart-window"
+    >
+
+        <div class="cart-header">
+
+            <h2>
+                Your Shopping Cart
+            </h2>
+
+            <button
+                class="close-cart"
+                onclick="closeCart()"
+                aria-label="Close cart"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div id="cart-items"></div>
+
+
+        <div class="cart-total">
+
+            <strong>
+                Subtotal:
+                $<span id="cart-total">0.00</span>
+            </strong>
+
+        </div>
+
+
+        <a
+            href="catalog.html"
+            class="continue-shopping"
+        >
+            Continue Shopping
+        </a>
+
+        <button
+            class="future-checkout"
+            disabled
+        >
+            Future Checkout
+        </button>
+
+    </div>
+
+
+    <footer>
+
+        <p>
+            &copy; 2026 The Weeping Fae.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="header.js"></script>
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+
+    <script>
+        updateCart();
+    </script>
+
+</body>
+
+</html>

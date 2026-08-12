@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>The Weeping Fae</title>
+
+    <link
+        rel="stylesheet"
+        href="styles.css"
+    >
+</head>
+
+<body>
+
+    <div class="announcement-bar">
+       Welcome to the world of The Weeping Fae
+    </div>
+
+    <div id="site-header"></div>
+
+<section class="brand-intro">
+
+    <!-- TOP TEXT -->
+
+    <div class="brand-copy">
+
+        <h1>
+            Handcrafted Adornments by Your Fairy Guardian Aunty
+        </h1>
+
+        <p>
+            The Weeping Fae is a polymer clay jewelry business by Jocelyn Doffner.
+            Inspired by fantasy, diversity, nature and the people around us,
+            our goal is to create a safe space for anyone and everyone to enjoy
+            fashion in a unique way!
+        </p>
+
+        <a
+            href="catalog.html"
+            class="collection-button"
+        >
+            Shop The New Collection
+        </a>
+
+    </div>
+
+
+    <!-- SPLIT PHOTOS DIRECTLY UNDER TEXT -->
+
+    <div class="split-banner">
+
+        <div class="split-banner-image">
+
+            <img
+                src="https://auntymonstera.com/cdn/shop/files/8A401F12-8E13-4212-99DB-8D23DC730C7F_750x.jpg?v=1745031144"
+                alt="Handmade jewelry"
+            >
+
+        </div>
+
+
+        <div class="split-banner-image">
+
+            <img
+                src="https://auntymonstera.com/cdn/shop/files/CAE93D3A-A3CF-4B7C-8561-5AB16AC35D6F_750x.jpg?v=1727748883"
+                alt="Handcrafted jewelry"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+    <section class="shop-tools">
+
+        <h2>
+            Find Your Adornment
+        </h2>
+
+
+        <div class="search-box">
+
+            <input
+                type="search"
+                id="product-search"
+                placeholder="Search chainmail, bells, earrings, hair pins..."
+                aria-label="Search the jewelry collection"
+            >
+
+            <button
+                type="button"
+                onclick="searchProducts()"
+            >
+                Search
+            </button>
+
+        </div>
+
+
+        <h2>
+            Shop By Collection
+        </h2>
+
+
+        <div class="category-buttons">
+
+            <button onclick="filterCategory('All')">
+                All
+            </button>
+
+            <button onclick="filterCategory('Glasses Chains')">
+                Glasses Chains
+            </button>
+
+            <button onclick="filterCategory('Bells')">
+                Bells
+            </button>
+
+            <button onclick="filterCategory('Earrings')">
+                Earrings
+            </button>
+
+            <button onclick="filterCategory('Hair Pins')">
+                Hair Pins
+            </button>
+
+            <button onclick="filterCategory('Chainmail Necklaces')">
+                Chainmail
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section class="featured-section">
+
+        <div class="featured-heading">
+
+            <div>
+
+                <h2>
+                    The Collection
+                </h2>
+
+                <p>
+                    Handmade pieces for the material plane and beyond.
+                </p>
+
+            </div>
+
+            <a href="catalog.html">
+                View catalog
+            </a>
+
+        </div>
+
+
+        <!-- ALL PRODUCTS WILL APPEAR HERE -->
+
+        <div
+            class="products"
+            id="featured-products"
+        ></div>
+
+    </section>
+
+
+    <!-- PRODUCT DETAIL POPUP -->
+
+    <div
+        class="product-modal-overlay"
+        id="product-modal-overlay"
+        onclick="closeProductModal()"
+    ></div>
+
+
+    <div
+        class="product-modal"
+        id="product-modal"
+    >
+
+        <button
+            class="product-modal-close"
+            type="button"
+            onclick="closeProductModal()"
+            aria-label="Close product details"
+        >
+            ×
+        </button>
+
+
+        <div class="product-modal-content">
+
+
+            <div class="product-modal-image-container">
+
+                <img
+                    id="modal-product-image"
+                    src=""
+                    alt=""
+                >
+
+            </div>
+
+
+            <div class="product-modal-info">
+
+                <p
+                    class="product-category"
+                    id="modal-product-category"
+                ></p>
+
+
+                <h2 id="modal-product-name"></h2>
+
+
+                <p
+                    class="modal-price"
+                    id="modal-product-price"
+                ></p>
+
+
+                <p
+                    class="modal-description"
+                    id="modal-product-description"
+                ></p>
+
+
+                <div class="product-detail-row">
+
+                    <strong>
+                        Materials
+                    </strong>
+
+                    <span id="modal-product-materials"></span>
+
+                </div>
+
+
+                <div class="product-detail-row">
+
+                    <strong>
+                        Dimensions
+                    </strong>
+
+                    <span id="modal-product-dimensions"></span>
+
+                </div>
+
+
+                <div class="product-detail-row">
+
+                    <strong>
+                        SKU
+                    </strong>
+
+                    <span id="modal-product-sku"></span>
+
+                </div>
+
+
+                <div class="product-detail-row">
+
+                    <strong>
+                        Availability
+                    </strong>
+
+                    <span id="modal-product-availability"></span>
+
+                </div>
+
+
+                <div class="quantity-section">
+
+                    <p>
+                        Quantity
+                    </p>
+
+
+                    <div class="quantity-control">
+
+                        <button
+                            type="button"
+                            onclick="decreaseQuantity()"
+                            aria-label="Decrease quantity"
+                        >
+                            −
+                        </button>
+
+
+                        <span id="product-quantity">
+                            1
+                        </span>
+
+
+                        <button
+                            type="button"
+                            onclick="increaseQuantity()"
+                            aria-label="Increase quantity"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="modal-add-cart"
+                    class="modal-add-cart"
+                    type="button"
+                    onclick="addModalProductToCart()"
+                >
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- CART OVERLAY -->
+
+    <div
+        class="cart-overlay"
+        id="cart-overlay"
+        onclick="closeCart()"
+    ></div>
+
+
+    <!-- CART DRAWER -->
+
+    <div
+        class="cart-window"
+        id="cart-window"
+    >
+
+        <div class="cart-header">
+
+            <h2>
+                Your Shopping Cart
+            </h2>
+
+
+            <button
+                class="close-cart"
+                type="button"
+                onclick="closeCart()"
+                aria-label="Close cart"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div id="cart-items"></div>
+
+
+        <div class="cart-total">
+
+            <strong>
+                Subtotal:
+                $<span id="cart-total">0.00</span>
+            </strong>
+
+        </div>
+
+
+        <a
+            href="catalog.html"
+            class="continue-shopping"
+        >
+            Continue Shopping
+        </a>
+
+
+        <button
+            class="future-checkout"
+            type="button"
+            disabled
+        >
+            Future Checkout
+        </button>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+
+        <div class="footer-column">
+
+            <h2>
+                Quick links
+            </h2>
+
+            <a href="catalog.html">
+                Catalog
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="faq.html">
+                FAQ
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h2>
+                Thank you!
+            </h2>
+
+            <p>
+                Be sure to tag and follow us on instgram @auntymonstera to stay up to date with the newest drops!
+            </p>
+
+        </div>
+
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="header.js"></script>
+
+    <script src="products.js"></script>
+
+    <script src="cart.js"></script>
+
+    <script src="store.js"></script>
+
+
+    <script>
+    document.addEventListener(
+        "DOMContentLoaded",
+        function() {
+
+            displayFeaturedProducts();
+
+            updateCart();
+
+        }
+    );
+</script>
+
+    </script>
+
+</body>
+
+</html>
