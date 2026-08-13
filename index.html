@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -9,172 +10,252 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>The Weeping Fae</title>
+    <title>
+        The Weeping Fae
+    </title>
 
     <link
         rel="stylesheet"
         href="styles.css"
     >
+
 </head>
+
 
 <body>
 
+
+    <!-- =========================
+         ANNOUNCEMENT BAR
+    ========================== -->
+
     <div class="announcement-bar">
-       Welcome to the world of The Weeping Fae
+
+        Welcome to the World of The Weeping Fae
+
     </div>
+
+
+
+    <!-- =========================
+         SHARED HEADER
+    ========================== -->
 
     <div id="site-header"></div>
 
-<section class="brand-intro">
-
-    <!-- TOP TEXT -->
-
-    <div class="brand-copy">
-
-        <h1>
-            Handcrafted Adornments by Your Fairy Guardian Aunty
-        </h1>
-
-        <p>
-            The Weeping Fae is a polymer clay jewelry business by Jocelyn Doffner.
-            Inspired by fantasy, diversity, nature and the people around us,
-            our goal is to create a safe space for anyone and everyone to enjoy
-            fashion in a unique way!
-        </p>
-
-        <a
-            href="catalog.html"
-            class="collection-button"
-        >
-            Shop The New Collection
-        </a>
-
-    </div>
 
 
-    <!-- SPLIT PHOTOS DIRECTLY UNDER TEXT -->
+    <!-- =========================
+         BRAND INTRO
+    ========================== -->
 
-    <div class="split-banner">
+    <section class="brand-intro">
 
-        <div class="split-banner-image">
+        <div class="brand-copy">
 
-            <img
-                src="https://auntymonstera.com/cdn/shop/files/8A401F12-8E13-4212-99DB-8D23DC730C7F_750x.jpg?v=1745031144"
-                alt="Handmade jewelry"
+            <h1>
+                Handcrafted Adornments by Your Fairy Guardian Aunty
+            </h1>
+
+
+            <p>
+                The Weeping Fae is a polymer clay jewelry business
+                by Jocelyn Doffner. Inspired by fantasy, diversity,
+                nature and the people around us, our goal is to create
+                a safe space for anyone and everyone to enjoy fashion
+                in a unique way!
+            </p>
+
+
+            <a
+                href="catalog.html"
+                class="collection-button"
             >
-
-        </div>
-
-
-        <div class="split-banner-image">
-
-            <img
-                src="https://auntymonstera.com/cdn/shop/files/CAE93D3A-A3CF-4B7C-8561-5AB16AC35D6F_750x.jpg?v=1727748883"
-                alt="Handcrafted jewelry"
-            >
-
-        </div>
-
-    </div>
-
-</section>
-
-    <section class="shop-tools">
-
-        <h2>
-            Find Your Adornment
-        </h2>
-
-
-        <div class="search-box">
-
-            <input
-                type="search"
-                id="product-search"
-                placeholder="Search chainmail, bells, earrings, hair pins..."
-                aria-label="Search the jewelry collection"
-            >
-
-            <button
-                type="button"
-                onclick="searchProducts()"
-            >
-                Search
-            </button>
-
-        </div>
-
-
-        <h2>
-            Shop By Collection
-        </h2>
-
-
-        <div class="category-buttons">
-
-            <button onclick="filterCategory('All')">
-                All
-            </button>
-
-            <button onclick="filterCategory('Glasses Chains')">
-                Glasses Chains
-            </button>
-
-            <button onclick="filterCategory('Bells')">
-                Bells
-            </button>
-
-            <button onclick="filterCategory('Earrings')">
-                Earrings
-            </button>
-
-            <button onclick="filterCategory('Hair Pins')">
-                Hair Pins
-            </button>
-
-            <button onclick="filterCategory('Chainmail Necklaces')">
-                Chainmail
-            </button>
-
-        </div>
-
-    </section>
-
-
-    <section class="featured-section">
-
-        <div class="featured-heading">
-
-            <div>
-
-                <h2>
-                    The Collection
-                </h2>
-
-                <p>
-                    Handmade pieces for the material plane and beyond.
-                </p>
-
-            </div>
-
-            <a href="catalog.html">
-                View catalog
+                Shop The New Collection
             </a>
 
         </div>
 
-
-        <!-- ALL PRODUCTS WILL APPEAR HERE -->
-
-        <div
-            class="products"
-            id="featured-products"
-        ></div>
-
     </section>
 
 
-    <!-- PRODUCT DETAIL POPUP -->
+
+    <!-- =========================
+         MAIN PAGE WITH MARGINS
+    ========================== -->
+
+    <main class="page-container">
+
+
+        <!-- =========================
+             SPLIT PHOTO BANNER
+        ========================== -->
+
+        <section class="split-banner">
+
+            <div class="banner-half">
+
+                <img
+                    src="https://auntymonstera.com/cdn/shop/files/8A401F12-8E13-4212-99DB-8D23DC730C7F_750x.jpg?v=1745031144"
+                    alt="Handmade jewelry"
+                >
+
+            </div>
+
+
+            <div class="banner-half">
+
+                <img
+                    src="https://auntymonstera.com/cdn/shop/files/CAE93D3A-A3CF-4B7C-8561-5AB16AC35D6F_750x.jpg?v=1727748883"
+                    alt="Handcrafted jewelry"
+                >
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             SEARCH AND CATEGORIES
+        ========================== -->
+
+        <section class="shop-tools">
+
+            <h2>
+                Find Your Adornment
+            </h2>
+
+
+            <div class="search-box">
+
+                <input
+                    type="search"
+                    id="product-search"
+                    placeholder="Search chainmail, bells, earrings, hair pins..."
+                    aria-label="Search the jewelry collection"
+                >
+
+
+                <button
+                    type="button"
+                    onclick="searchProducts()"
+                >
+                    Search
+                </button>
+
+            </div>
+
+
+
+            <h2>
+                Shop By Collection
+            </h2>
+
+
+            <div class="category-buttons">
+
+                <button
+                    type="button"
+                    onclick="filterCategory('All')"
+                >
+                    All
+                </button>
+
+
+                <button
+                    type="button"
+                    onclick="filterCategory('Glasses Chains')"
+                >
+                    Glasses Chains
+                </button>
+
+
+                <button
+                    type="button"
+                    onclick="filterCategory('Bells')"
+                >
+                    Bells
+                </button>
+
+
+                <button
+                    type="button"
+                    onclick="filterCategory('Earrings')"
+                >
+                    Earrings
+                </button>
+
+
+                <button
+                    type="button"
+                    onclick="filterCategory('Hair Pins')"
+                >
+                    Hair Pins
+                </button>
+
+
+                <button
+                    type="button"
+                    onclick="filterCategory('Chainmail Necklaces')"
+                >
+                    Chainmail
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             FEATURED COLLECTION
+        ========================== -->
+
+        <section class="featured-section">
+
+            <div class="featured-heading">
+
+
+                <div>
+
+                    <h2>
+                        Featured Collection
+                    </h2>
+
+
+                    <p>
+                        Handmade pieces for the material plane and beyond.
+                    </p>
+
+                </div>
+
+
+                <a href="catalog.html">
+                    View Catalog
+                </a>
+
+            </div>
+
+
+
+            <!-- ONLY FEATURED PRODUCTS APPEAR HERE -->
+
+            <div
+                class="products"
+                id="featured-products"
+            ></div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         PRODUCT DETAIL POPUP
+    ========================== -->
 
     <div
         class="product-modal-overlay"
@@ -183,10 +264,12 @@
     ></div>
 
 
+
     <div
         class="product-modal"
         id="product-modal"
     >
+
 
         <button
             class="product-modal-close"
@@ -198,8 +281,11 @@
         </button>
 
 
+
         <div class="product-modal-content">
 
+
+            <!-- PRODUCT IMAGE -->
 
             <div class="product-modal-image-container">
 
@@ -212,7 +298,11 @@
             </div>
 
 
+
+            <!-- PRODUCT INFORMATION -->
+
             <div class="product-modal-info">
+
 
                 <p
                     class="product-category"
@@ -235,15 +325,19 @@
                 ></p>
 
 
+
                 <div class="product-detail-row">
 
                     <strong>
                         Materials
                     </strong>
 
-                    <span id="modal-product-materials"></span>
+                    <span
+                        id="modal-product-materials"
+                    ></span>
 
                 </div>
+
 
 
                 <div class="product-detail-row">
@@ -252,9 +346,12 @@
                         Dimensions
                     </strong>
 
-                    <span id="modal-product-dimensions"></span>
+                    <span
+                        id="modal-product-dimensions"
+                    ></span>
 
                 </div>
+
 
 
                 <div class="product-detail-row">
@@ -263,9 +360,12 @@
                         SKU
                     </strong>
 
-                    <span id="modal-product-sku"></span>
+                    <span
+                        id="modal-product-sku"
+                    ></span>
 
                 </div>
+
 
 
                 <div class="product-detail-row">
@@ -274,10 +374,15 @@
                         Availability
                     </strong>
 
-                    <span id="modal-product-availability"></span>
+                    <span
+                        id="modal-product-availability"
+                    ></span>
 
                 </div>
 
+
+
+                <!-- QUANTITY -->
 
                 <div class="quantity-section">
 
@@ -315,6 +420,9 @@
                 </div>
 
 
+
+                <!-- ADD TO CART -->
+
                 <button
                     id="modal-add-cart"
                     class="modal-add-cart"
@@ -324,6 +432,7 @@
                     Add to Cart
                 </button>
 
+
             </div>
 
         </div>
@@ -331,7 +440,10 @@
     </div>
 
 
-    <!-- CART OVERLAY -->
+
+    <!-- =========================
+         CART OVERLAY
+    ========================== -->
 
     <div
         class="cart-overlay"
@@ -340,14 +452,19 @@
     ></div>
 
 
-    <!-- CART DRAWER -->
+
+    <!-- =========================
+         CART DRAWER
+    ========================== -->
 
     <div
         class="cart-window"
         id="cart-window"
     >
 
+
         <div class="cart-header">
+
 
             <h2>
                 Your Shopping Cart
@@ -363,20 +480,26 @@
                 ×
             </button>
 
+
         </div>
+
 
 
         <div id="cart-items"></div>
 
 
+
         <div class="cart-total">
 
             <strong>
+
                 Subtotal:
                 $<span id="cart-total">0.00</span>
+
             </strong>
 
         </div>
+
 
 
         <a
@@ -387,6 +510,7 @@
         </a>
 
 
+
         <button
             class="future-checkout"
             type="button"
@@ -395,10 +519,14 @@
             Future Checkout
         </button>
 
+
     </div>
 
 
-    <!-- FOOTER -->
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
     <footer class="site-footer">
 
@@ -406,16 +534,19 @@
         <div class="footer-column">
 
             <h2>
-                Quick links
+                Quick Links
             </h2>
+
 
             <a href="catalog.html">
                 Catalog
             </a>
 
+
             <a href="about.html">
                 About
             </a>
+
 
             <a href="faq.html">
                 FAQ
@@ -424,14 +555,18 @@
         </div>
 
 
+
         <div class="footer-column">
 
             <h2>
-                Thank you!
+                Thank You!
             </h2>
 
+
             <p>
-                Be sure to tag and follow us on instgram @auntymonstera to stay up to date with the newest drops!
+                Be sure to tag and follow us on Instagram
+                @auntymonstera to stay up to date with
+                the newest drops!
             </p>
 
         </div>
@@ -440,7 +575,10 @@
     </footer>
 
 
-    <!-- JAVASCRIPT -->
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
 
     <script src="header.js"></script>
 
@@ -451,20 +589,22 @@
     <script src="store.js"></script>
 
 
+
     <script>
-    document.addEventListener(
-        "DOMContentLoaded",
-        function() {
 
-            displayFeaturedProducts();
+        document.addEventListener(
+            "DOMContentLoaded",
+            function() {
 
-            updateCart();
+                displayFeaturedProducts();
 
-        }
-    );
-</script>
+                updateCart();
+
+            }
+        );
 
     </script>
+
 
 </body>
 
